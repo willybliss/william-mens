@@ -66,8 +66,78 @@ SELECT t2.continentName, t1.countryName, t1.dialCode, t3.regionName, t4.cityName
 \
 \
 \
+#Kwaku Solution\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf3 #1\
+SELECT productName\
+FROM products\
+WHERE productName LIKE '%Ford%'\
 \
+#2\
+SELECT productName\
+FROM products\
+WHERE productName LIKE '%ship'\
 \
+#3\
+SELECT count(*) AS 'Number of customers', country\
+FROM customers\
+WHERE country IN ('Denmark', 'Norway', 'Sweden')\
+GROUP BY country\
+\
+#4\
+SELECT productCode\
+FROM products\
+WHERE productCode BETWEEN 'S700_1000' AND 'S700_1499'\
+\
+#5\
+SELECT customerName\
+FROM customers\
+WHERE customerName LIKE '%1%' \
+OR customerName LIKE '%2%'\
+OR customerName LIKE '%3%'\
+OR customerName LIKE '%4%'\
+OR customerName LIKE '%5%'\
+OR customerName LIKE '%6%'\
+OR customerName LIKE '%7%'\
+OR customerName LIKE '%8%'\
+OR customerName LIKE '%9%'\
+OR customerName LIKE '%0%'\
+\
+#6\
+SELECT CONCAT(firstName, ' ', lastName) AS 'Employee Names'\
+FROM employees\
+WHERE firstName IN ('Dianne', 'Diane') \
+OR lastName IN ('Dianne', 'Diane')\
+\
+#7\
+SELECT productName\
+FROM products\
+WHERE productName LIKE '%ship%'\
+OR productName LIKE '%boat%'\
+\
+#8\
+SELECT productName, productCode\
+FROM products\
+WHERE productCode LIKE 'S700%'\
+\
+#9\
+SELECT CONCAT(firstName, ' ', lastName) AS 'Employee Names'\
+FROM employees\
+WHERE firstName IN ('Larry', 'Barry') \
+OR lastName IN ('Larry', 'Barry')\
+\
+#10\
+SELECT CONCAT(firstName, ' ', lastName) AS 'Employee Names'\
+FROM employees\
+WHERE firstName LIKE '%[^a-zA-Z]%'\
+OR lastName LIKE '%[^a-zA-Z]%'\
+\
+#11\
+SELECT productVendor\
+FROM products\
+WHERE productVendor LIKE '%Diecast'\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6241\tx6721\tx7201\tx7681\tx8161\tx8641\tx9121\tx9601\tx10081\tx10561\tx11041\tx11521\tx12001\tx12482\tx12962\tx13442\tx13922\tx14402\tx14882\tx15362\tx15842\tx16322\tx16802\tx17282\tx17762\tx18242\tx18723\tx19203\tx19683\tx20163\tx20643\tx21123\tx21603\tx22083\tx22563\tx23043\tx23523\tx24003\tx24483\tx24964\tx25444\tx25924\tx26404\tx26884\tx27364\tx27844\tx28324\tx28804\tx29284\tx29764\tx30244\tx30725\li80\fi-80\pardirnatural\partightenfactor0
+\cf3 \
 \
 \
 \
